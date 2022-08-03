@@ -1,6 +1,6 @@
-@php
+{{-- @php
     use \App\Http\Controllers\PostController;
-@endphp
+@endphp --}}
 @extends("master")
 @section("title", "Posts")
 
@@ -21,7 +21,9 @@
                     <div class="card-action">
                       <a href="#">{{ $post->author }}</a>
                       {{-- <a href="#" class="right">{{ $post->created_at }}</a> --}}
-                      <a href="#" class="right">{{ PostController::convert($post->created_at) }}</a>
+                      {{-- <a href="#" class="right">{{ PostController::convert($post->created_at) }}</a> --}}
+                      <a href="#" class="right">{{ convert($post->created_at) }}</a>
+                      {{-- <a href="">{{ hello() }}</a> --}}
                     </div>
                   </div>
                 </a>

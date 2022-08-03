@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -28,3 +29,6 @@ Route::put('/post/{post}/edit', [PostController::class, "update"]);
 
 Route::get('/post/{id}/delete', [PostController::class, "delete"]);
 Route::get('/post/{id}', [PostController::class, "show"])->name('post.single');
+
+
+Route::get('/users', [UsersController::class, "index"]);

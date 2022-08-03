@@ -20,10 +20,10 @@ class PostController extends Controller
 
 
 
-    public  static function convert($data)
-    {
-        return Carbon::parse($data)->format('m/d/Y');
-    }
+    // public  static function convert($data)
+    // {
+    //     return Carbon::parse($data)->format('m/d/Y');
+    // }
 
 
 
@@ -58,11 +58,11 @@ class PostController extends Controller
         // dd($pureDada);
 
         // 1 nacin
-        $post = new Post();
-        $post->author = request("author");
-        $post->title = request("title");
-        $post->body = request("body");
-        $post->save();
+        // $post = new Post();
+        // $post->author = request("author");
+        // $post->title = request("title");
+        // $post->body = request("body");
+        // $post->save();
 
 
         // 2 nacin popunjava se fillable properyty u samom modelu

@@ -1,3 +1,32 @@
 /* body {
     background-color: tomato;
 } */
+
+body{
+    padding-bottom: 300px;
+}
+
+footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+    padding: 10px;
+    height: 20vh;
+
+}
+
+/* footer ul li {
+    display: inline-block;
+
+} */
+
+footer ul li a{
+  padding-right: 20px;
+  font-size: 25px;
+
+
+
+}
+
+
+
