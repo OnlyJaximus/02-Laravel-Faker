@@ -16,7 +16,7 @@
                 <div class="card blue-grey darken-1">
                     <div class="card-content white-text">
                       <span class="card-title">{{substr($post->title, 0, 25) }}</span>
-                      <p>{{substr($post->body,0,20) }}</p>
+                      <p>{{substr($post->body,0,50) }}</p>
                     </div>
                     <div class="card-action">
                       <a href="#">{{ substr($post->user->name, 0, 16)}}</a>

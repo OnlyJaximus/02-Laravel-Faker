@@ -11,7 +11,7 @@
                   <ul>
                     @foreach ($latestPosts as $post)
                     <li><a class="grey-text text-lighten-3"
-                        href="/post/{{ $post->id }}"><span style="color: aqua">Post by:</span> {{$post->author}}</a></li>
+                        href="/post/{{ $post->id }}"><span style="color: aqua">Post by:</span> {{$post->user->name}}</a></li>
                     @endforeach
 
 

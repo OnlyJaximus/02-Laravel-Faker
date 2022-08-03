@@ -32,3 +32,5 @@ Route::get('/post/{id}', [PostController::class, "show"])->name('post.single');
 
 
 Route::get('/users', [UsersController::class, "index"]);
+Route::get('/user/{user}', [UsersController::class, "destroy"]);
+Route::get('/user/{user}/posts', [UsersController::class, "posts"]);
