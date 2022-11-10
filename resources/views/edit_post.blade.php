@@ -10,12 +10,11 @@
                         @csrf
                         @method('put')
                         <div class="row">
-                            <div class="input-field col s12">
-                                <input type="text" name="author" placeholder="author" id="name"
-                                class="{{$errors->has("author")? 'red': ''}}"
-                                value="{{$post->author }}">
-                                <label for="name">Author</label>
-                            </div>
+                         <div class="input-field col s12">
+                            <input type="text" name="name" placeholder="author" id="name"
+                                value="{{ $user->name }}" class="{{ $errors->has('name') ? 'red' : '' }}">
+                            <label for="name">Name</label>
+                        </div>
 
                             <div class="input-field col s12">
                                 <input type="text" name="title" placeholder="title" id="title" class="{{$errors->has("title")? 'red': ''}}"   value="{{$post->title}}">
