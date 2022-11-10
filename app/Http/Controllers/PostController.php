@@ -83,8 +83,6 @@ class PostController extends Controller
     {
         $post = Post::find($id);
 
-
-
        // return view('edit', ["post" => $post]);
         return view('edit_post', compact('post'));
     }
@@ -93,9 +91,9 @@ class PostController extends Controller
     // 2 Nacin EDIT route model binding i type hinting
     public function edit(Post $post)
     {
-
+         $user = $post->user;
         // return view('edit', ["post" => $post]);
-        return view('edit_post', compact('post'));
+        return view('edit_post', compact('post', 'user'));
     }
 
 
@@ -129,10 +127,10 @@ class PostController extends Controller
             "title" => "required",
             "body" => "required",
         ]);
-
+         $user = $post->user;
 
         $post->update($pureData);
-
+        $user->update($pureData);
         return redirect('/post/' . $post->id)->with('updated', "Post UPDATED");
     }
 
